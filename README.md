@@ -1,0 +1,237 @@
+# Atrium — a Studio starter
+
+A four-page business site with a **split hero and no video at all**: a work
+page with a before-and-after slider, pricing with a monthly/yearly switch and a
+table that compares the plans, and a contact form built properly. Not a finished
+template you recolor — a professional structure you make yours, and can defend
+every choice in.
+
+**See it running: <https://dadiletta.github.io/studio-atrium/>** — that page is
+built from this branch, so it is exactly what you get when you copy it.
+
+That difference is the point. A team handed a finished site rearranges it. A
+team handed a real structure builds one.
+
+```
+index.html      hero (headline over a photo) · client names · services · numbers · case study · recent work · testimonials · FAQ · call to action
+index-2.html    another home: the nav over a photo slider
+index-3.html    a third home: dark and split, a short form beside three photos. Keep one home
+elements.html   the parts page: copy what you want, then delete it
+services.html   three services told properly, the process, pricing with a monthly/yearly switch, and a table comparing the plans
+work.html       one case study with a before-and-after slider, three more jobs as photo-and-card vignettes, a client's words
+contact.html    a contact form built properly, the other ways to reach you, and a map
+styles.css      your palette, your type, the CSS mesh, the pricing switch, the carousels, the business parts, the effects
+js/site.js      the phone menu, the footer year, the demo forms, the carousels, the nav over the hero, the effects
+js/business.js  the before-and-after slider, the drifting client names, the spotlight on the service cards
+img/            the photographs, and favicon.svg (the icon in the browser tab)
+AGENTS.md       what AI help may and may not do on this project
+```
+
+## Start here
+
+1. When VS Code offers to install this folder's recommended extensions, say
+   yes. They are **Live Server**, which runs the site, and **Live Share**, which
+   is how you show it to a teammate or your teacher when it misbehaves — click
+   **Live Share** in the status bar, paste the link it copies into Google Chat,
+   and go back to work.
+2. Open `index.html` with **Live Server** — the **Go Live** button in the status
+   bar. Not by double-clicking: that opens a path on your disk (`file://`),
+   not a web address, with no server behind it, and a page loaded that way
+   is not allowed to do several things a real page does.
+3. Change `data-theme="corporate"` on the `<html>` tag — **on every page**.
+   Do this first. Try `winter`, `nord`, `emerald`, `lofi`, `business`, `garden`,
+   `pastel`. All 35 are at
+   [daisyui.com/docs/themes](https://daisyui.com/docs/themes/).
+4. Replace the words. Every one of them.
+5. Commit as you go. Push at least once a session — a commit is local until you
+   push it.
+
+## What is in it
+
+- **A before-and-after slider** on the Work page: drag the line between two
+  photographs of the same thing. The handle is a real `<input type="range">`
+  stretched invisibly over the photos, so a mouse, a finger, Tab and the arrow
+  keys all work, and a screen reader hears where the line is.
+- **A table that compares the plans**, under the pricing cards. It is a real
+  `<table>`: the plans are column headers (`scope="col"`), each line names its
+  row (`scope="row"`), and every tick also says *Included* to a screen reader.
+  On a phone it scrolls sideways inside its own box, with the row names pinned.
+- **Vignettes** on the Work page: each job is a photograph with a card over its
+  edge, and they swap sides down the page. A dozen Tailwind grid classes, no
+  CSS of their own; read them to see how one grid cell overlaps another.
+- **A pricing switch with no JavaScript.** The monthly/yearly toggle is a
+  checkbox, and two `:has()` rules in `styles.css` swap which price shows.
+- **A FAQ with no JavaScript.** Each question is a `<details>` element, which
+  opens and closes on its own and works with a keyboard.
+- **A phone menu that needs no JavaScript** either — another `<details>`.
+  `js/site.js` only adds "close when I tap away".
+- **One typeface from Google Fonts**, Plus Jakarta Sans, in several weights.
+- **Forms that check themselves.** `required` and `type="email"` make the
+  browser check before anything is sent, and daisyUI's `validator` class turns a
+  field red only after somebody has touched it.
+- **A map** on the Contact page, from OpenStreetMap: free, no account, no key.
+- **A skip link**, the first thing a keyboard user reaches. Press Tab on any
+  page to see it.
+
+## Two home pages and a box of parts
+
+A professional template ships more than one home page, and a page of
+"elements": every part it has, working, so you can see them before you choose.
+This one does too.
+
+- **`index-2.html`** is the same site with a different top: the nav sits over a
+  full-screen photo slider and turns solid as you scroll. See it at
+  <https://dadiletta.github.io/studio-atrium/index-2.html>. **`index-3.html`** is a third: dark and split, a one-field form that books a
+  call beside three photos. **Keep one home**: delete the others and name
+  the keeper `index.html`. The nav's **Homes** dropdown shows each home's top;
+  delete it once you've chosen.
+- **`elements.html`** is the parts page: a photo slider, a quote carousel,
+  tabs, pricing, a team, a timeline, steps, a photo wall, a call to action on a
+  photo, questions, a before-and-after slider, a vignette, client names that
+  drift, and a table comparing the plans. Its nav is a part too, the centered one. See it at
+  <https://dadiletta.github.io/studio-atrium/elements.html>. Each part sits between a `COPY FROM HERE` and a
+  `TO HERE` comment: copy what you want into your pages, then **delete
+  `elements.html`** before you hand in, and the **Elements** link in every nav
+  with it.
+
+### How the carousels work
+
+A carousel is daisyUI's `carousel`: a row that scrolls sideways and snaps to
+each slide, with **no script at all**. Swipe it, or scroll it with a trackpad.
+`js/site.js` adds the rest to anything marked `data-carousel`: the arrows
+(`data-prev`, `data-next`), one dot per stop (`data-dots`), and, with
+`data-autoplay="7000"`, turning every seven seconds. Those buttons stay hidden
+until the script runs (`data-carousel-controls hidden`), because a button that
+does nothing is worse than none.
+
+A slider that turns by itself has to stop for people: it holds while the
+pointer or the keyboard is on it, it has a pause button, and for anyone whose
+computer asks for less motion it never turns at all. Keep all three. Add or
+remove slides freely; every slide is one element inside the `carousel`.
+
+## The effects
+
+A business site has a few moves of its own, and this one has them. Every effect
+is switched on by an attribute or a class in the HTML, and every one is extra:
+delete it and the element simply sits there, finished. With the scripts blocked
+nothing is hidden, and for anyone whose computer asks for less motion nothing
+moves.
+
+| Put this on an element | And it |
+| --- | --- |
+| `class="mark-sweep"` | on a few words of a heading, draws a marker stroke under them as the page opens. Once per page. |
+| `data-marquee` | on the box around a list of names, makes them drift sideways in a loop. Its pause button names the box's `id` in `aria-controls`. |
+| `data-spotlight` | on a card, puts a soft light of your primary color under the mouse. |
+| `data-compare` | is the before-and-after slider. Copy the whole block from `work.html`. |
+| `class="plan-featured"` | on a pricing card, gives it a border of your theme's colors that turns three times, then rests. |
+| `data-reveal` | fades it up as it scrolls into view, once. `"left"`, `"right"` or `"zoom"` change how it arrives. |
+| `data-count` | counts up to the number in its own text: `12`, `1,200` and `40+` all work. `00` stays `00`. |
+| `data-lightbox` | on a block of photo links, opens each photo large over the page. |
+| `data-sticky-nav` | on the nav, adds a shadow once the page scrolls under it. |
+| `data-to-top` | is the back-to-top button at the bottom of every page. |
+
+The first three run in `js/business.js`, the rest in `js/site.js`. Use them
+where they help somebody read. A page where everything moves is a page that
+makes people wait, and a client is reading for the work, not the effects.
+
+## The shapes are CSS, and that is worth understanding
+
+The shapes on the Services page are `.mesh` in `styles.css`: three radial
+gradients over a linear one, in **your theme's own colors**. So they restyle
+when you change the theme, they weigh nothing, and they never 404.
+
+Move the percentages around and watch what happens. It is the fastest way to
+understand what a radial gradient's arguments actually mean, and it is the whole
+trick behind a lot of expensive-looking pages.
+
+Replacing one with a real photograph is a fine decision — but then it is not
+decorative any more, so it needs real `alt` text and a credit line.
+
+## Forms that go nowhere, on purpose
+
+The contact form and the footer signup are marked `data-demo`. Press submit and
+`js/site.js` shows a thank-you message instead of sending anything, because a
+form needs a service to send to — Formspree, Netlify Forms, a Google Form — and
+choosing one is your team's decision. To make one real: give the `<form>` an
+`action`, delete `data-demo`, and test it with your own email.
+
+## Things that will bite you
+
+- **The pages must match.** Theme, nav, footer, font, credits. A site that
+  restyles itself between clicks reads as broken. This is the real cost of plain
+  HTML: every page carries its own copy.
+- **The nav is in there twice** on every page — a row of links for wide screens
+  and the phone dropdown. Add a page, add it to both, on every page.
+- **A before and after that do not line up.** The two photographs need the same
+  size and the same framing, or the line shows a jump. The pair here was lined
+  up by computer to the pixel. Take yours from the same spot, or edit one photo
+  into the other, as this pair was. And show your own work, never somebody
+  else's misfortune: a flood or a fire is not a business's before.
+- **A built-in theme is not a guarantee.** `corporate`'s own blue and its own
+  green both fail the 4.5:1 floor with white text on them; `styles.css`
+  overrides both, and says by how much. Whatever theme you pick, measure it.
+- **Deleting structure to "simplify".** `card-body` inside `card`,
+  `collapse-title` inside `collapse` — these look like extra wrappers and are
+  not. Remove one and the component stops laying out.
+- **The asymmetric split.** The hero is 7 columns to 5, not 6 and 6, because a
+  50/50 split of unequal things looks accidental. If you even it up, look at it
+  honestly afterwards.
+- **A "trusted by" row of gray rectangles fools no one.** If you do not have
+  real client names, delete that section rather than faking it.
+
+## Check your own work before you hand it in
+
+Tick this yourself first — auditing a page against a written spec is a graded
+skill in its own right (`WD3.B`), and it is much better to find these than to
+have them found.
+
+- [ ] Every placeholder is gone. Search every page for `Your`, `00`, `20XX`,
+      `Client`, `Their name`, `five words` and `______`.
+- [ ] Every section is the element it should be — `nav`, `header`, `main`,
+      `footer`, `article`, `address` — not a `div` wearing a class.
+- [ ] The headings outline each page. Read `h1`, `h2`, `h3` alone, in order: one
+      `h1` per page, no levels skipped.
+- [ ] Every form field has a `<label for>` pointing at its `id`. A placeholder
+      is not a label; it disappears exactly when it is needed.
+- [ ] One column on a phone, more on wider screens. Check at 380px, 768px and
+      full width. Nothing scrolls sideways at 380px.
+- [ ] There is **one** obvious call to action per page, and its label says what
+      happens. Not "Click here".
+- [ ] Your palette is recorded as a comment block at the top of `styles.css`,
+      with a mood sentence and a job for each color.
+- [ ] Two type faces at most: one for headings, one for body.
+- [ ] Every number on the page is one you can defend. A made-up statistic on a
+      real business site is a liability, not a design element.
+- [ ] Every price is real, or the pricing section is gone. The cards and the
+      table that compares the plans say the same thing.
+- [ ] Every before and after is your own work, and both photos are credited.
+- [ ] Body text against its background is at least **4.5:1**. Check it — do not
+      guess.
+- [ ] Every image has `alt` text that says what the image is FOR. Decorative
+      images take an empty `alt=""`, and the meshes are already `aria-hidden`.
+- [ ] Every image has its creator, source and license in the footer. **If you
+      cannot write that line, you are not allowed to use it.**
+- [ ] Every form either sends somewhere real, or says plainly that it does not.
+- [ ] If you used AI to generate any part of this, say so and say which part.
+      AI help on this project follows `AGENTS.md`: a tutor until your final
+      draft is done, then a hand with the polish.
+- [ ] It works from a fresh clone — no absolute paths to your own disk.
+- [ ] It is **pushed**.
+
+## Credits
+
+Component classes are [daisyUI](https://daisyui.com/) by Pouya Saadeghi (MIT),
+on [Tailwind CSS](https://tailwindcss.com/) (MIT). Both load from a CDN via the
+three tags in each file's `<head>`. Icons are from [Lucide](https://lucide.dev/)
+(ISC), copied into the pages as inline SVG. Plus Jakarta Sans is from
+[Google Fonts](https://fonts.google.com/), under the SIL Open Font License. The
+map is © OpenStreetMap contributors.
+
+The photographs are from Wikimedia Commons, each under a license that lets you
+use it (the tape deck's before and after is Sameer Verma's photograph and
+Pittigrilli's retouch of it, cropped and lined up for the slider), and the footer's "Photo credits" list says whose each one is, where it
+came from, the license, and that it was cropped. That list is the model for
+yours: swap a picture, swap its line. The shapes are CSS and the logo was drawn
+for this starter.
+
+Everything here was written for this course, MIT licensed. See `LICENSE`.
