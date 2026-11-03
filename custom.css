@@ -1,0 +1,50 @@
+/*** COLORS
+https://coolors.co/palette/e3f2fd-bbdefb-90caf9-64b5f6-42a5f5-2196f3-1e88e5-1976d2-1565c0-0d47a1
+***/
+
+:root {
+  --color-primary: #1565C0;
+  --color-accent: #E3F2FD;
+
+  --color-lightest-blue: #E3F2FD;
+  --color-sky: #64B5F6;
+  --color-darkish-blue: #1565C0;
+  --color-deep-blue: #0D47A1;
+}
+
+
+/*** FONTS ***/
+
+
+* {
+  font-family: "Noto Sans Math", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Serif", serif;
+}
+
+
+
+body {
+  background-color: var(--color-accent);
+}
+
+header {
+  background-color: var(--color-deep-blue);
+  color: white;
+}
+
+#number-stats {
+  background-color: var(--color-deep-blue);
+}
+
+footer {
+  background-color: var(--color-sky);
+
+}

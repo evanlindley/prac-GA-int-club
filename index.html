@@ -29,6 +29,13 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="custom.css" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+Math&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body class="bg-base-100 text-base-content">
@@ -96,7 +103,7 @@
       <div class="carousel w-full h-[100svh] min-h-[38rem] max-h-[62rem]" tabindex="0" role="group"
         aria-roledescription="carousel" aria-label="Highlights">
         <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide"
-          aria-label="1 of 3">
+          aria-label="1 of 2">
           <img class="absolute inset-0 size-full object-cover" src="img/tudorhouse.jpg" width="1600" height="900"
             fetchpriority="high" alt="A glass-roofed atrium with a spiral staircase" />
           <div class="slide-scrim"></div>
@@ -118,40 +125,22 @@
           </div>
         </div>
         <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide"
-          aria-label="2 of 3">
-          <img class="absolute inset-0 size-full object-cover" src="img/workshop-wide.jpg" width="1920" height="1080"
-            loading="lazy" alt="Sticky notes from a planning workshop on a white wall" />
+          aria-label="2 of 2">
+          <img class="absolute inset-0 size-full object-cover" src="img/intclubslide_example.png" width="1920"
+            height="1080" loading="lazy" alt="Sticky notes from a planning workshop on a white wall" />
           <div class="slide-scrim"></div>
           <div class="relative w-full max-w-6xl mx-auto px-6 pt-24 pb-28">
             <div class="max-w-4xl">
               <p
                 class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">
-                How we work</p>
+                Our bread and butter</p>
               <h2 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-tight mb-8">
                 Presentations</h2>
-              <p class="text-xl md:text-2xl mb-10 max-w-2xl">The first thing you do with a new client, in one sentence.
+              <p class="text-xl md:text-2xl mb-10 max-w-2xl">Culture presentations are our main form of educating
+                students
               </p>
               <div class="flex flex-col sm:flex-row gap-3 ">
-                <a class="btn btn-lg btn-primary" href="services.html">How it works</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide"
-          aria-label="3 of 3">
-          <img class="absolute inset-0 size-full object-cover" src="img/office-wide.jpg" width="1920" height="1080"
-            loading="lazy" alt="A quiet open office with long desks and glass walls" />
-          <div class="slide-scrim"></div>
-          <div class="relative w-full max-w-6xl mx-auto px-6 pt-24 pb-28">
-            <div class="max-w-4xl">
-              <p
-                class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">
-                Case study</p>
-              <h2 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-tight mb-8">What we did
-                for a client</h2>
-              <p class="text-xl md:text-2xl mb-10 max-w-2xl">The one result you can prove, with a number in it.</p>
-              <div class="flex flex-col sm:flex-row gap-3 ">
-                <a class="btn btn-lg btn-primary" href="contact.html">Start a project</a>
+                <a class="btn btn-lg btn-primary" href="services.html">How they work</a>
               </div>
             </div>
           </div>
@@ -291,7 +280,7 @@
 
     <!-- ============================================================ NUMBERS
            Three numbers you can defend, or delete them. -->
-    <section class="bg-neutral text-neutral-content" aria-label="In numbers">
+    <section id="number-stats" class="bg-neutral text-neutral-content" aria-label="In numbers">
       <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
         <div>
           <p class="text-5xl md:text-6xl font-extrabold mb-2" data-count>00</p>
@@ -405,76 +394,6 @@
           </figure>
         </div>
         <div class="flex justify-center gap-2 mt-8" data-dots></div>
-      </div>
-    </section>
-
-    <!-- ============================================================ VOICES
-           Three real people, each with a name and a role. -->
-    <section class="bg-base-200 border-y border-base-content/10">
-      <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12 text-center">What clients say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <figure class="card bg-base-100 shadow-sm" data-reveal>
-            <div class="card-body">
-              <span class="text-primary"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                  <path
-                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                </svg></span>
-              <blockquote class="text-lg leading-relaxed flex-1">One sentence somebody actually said. Specific beats
-                warm.</blockquote>
-              <figcaption class="flex items-center gap-3 mt-4">
-                <span
-                  class="grid place-items-center size-10 rounded-full bg-primary text-primary-content font-bold text-sm"
-                  aria-hidden="true">AN</span>
-                <span><strong class="block">Their name</strong><span class="text-sm opacity-80">Their role, their
-                    organization</span></span>
-              </figcaption>
-            </div>
-          </figure>
-          <figure class="card bg-base-100 shadow-sm" data-reveal>
-            <div class="card-body">
-              <span class="text-primary"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                  <path
-                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                </svg></span>
-              <blockquote class="text-lg leading-relaxed flex-1">A second sentence, from a different kind of client.
-              </blockquote>
-              <figcaption class="flex items-center gap-3 mt-4">
-                <span
-                  class="grid place-items-center size-10 rounded-full bg-secondary text-secondary-content font-bold text-sm"
-                  aria-hidden="true">AN</span>
-                <span><strong class="block">Their name</strong><span class="text-sm opacity-80">Their role, their
-                    organization</span></span>
-              </figcaption>
-            </div>
-          </figure>
-          <figure class="card bg-base-100 shadow-sm" data-reveal>
-            <div class="card-body">
-              <span class="text-primary"><svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                  <path
-                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                </svg></span>
-              <blockquote class="text-lg leading-relaxed flex-1">A third. If you only have one real quote, use one.
-              </blockquote>
-              <figcaption class="flex items-center gap-3 mt-4">
-                <span
-                  class="grid place-items-center size-10 rounded-full bg-neutral text-neutral-content font-bold text-sm"
-                  aria-hidden="true">AN</span>
-                <span><strong class="block">Their name</strong><span class="text-sm opacity-80">Their role, their
-                    organization</span></span>
-              </figcaption>
-            </div>
-          </figure>
-        </div>
       </div>
     </section>
 
