@@ -29,6 +29,10 @@ h6 {
   font-family: "PT Serif", serif;
 }
 
+.nav-bar-logo {
+  max-width: 40px;
+  max-height: 40px;
+}
 
 
 body {
