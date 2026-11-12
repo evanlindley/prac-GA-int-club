@@ -48,7 +48,19 @@ header {
   background-color: var(--color-deep-blue);
 }
 
+#contact {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+
 footer {
   background-color: var(--color-sky);
 
+}
+
+#photo-credits {
+  font-size: 10px;
+  color: black;
 }

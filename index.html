@@ -286,15 +286,14 @@
         <div class="carousel gap-6 w-full" tabindex="0" role="group" aria-roledescription="carousel"
           aria-label="Recent projects">
           <figure class="carousel-item flex-col w-[80%] sm:w-[45%] md:w-[calc((100%-3rem)/3)]">
-            <img class="rounded-box aspect-[4/5] w-full object-cover shadow-lg" src="img/sloveniaculture.png"
-              width="1600" height="900" loading="lazy" alt="A slide from a presentation about Slovenian culture" />
+            <img class="rounded-box aspect-[4/5] w-full object-cover shadow-lg" src="img/sloveniamap.jpg" width="1600"
+              height="900" loading="lazy" alt="A slide from a presentation about Slovenian culture" />
             <figcaption class="mt-3 text-sm opacity-80"><strong>Slovenia</strong> Presented by the club president. It is
               not Slovakia.</figcaption>
           </figure>
           <figure class="carousel-item flex-col w-[80%] sm:w-[45%] md:w-[calc((100%-3rem)/3)]">
-            <img class="rounded-box aspect-[4/5] w-full object-cover shadow-lg" src="img/londonpublictransportslide.png"
-              width="1920" height="1080" loading="lazy"
-              alt="A slid from a presentation about London's public transport" />
+            <img class="rounded-box aspect-[4/5] w-full object-cover shadow-lg" src="img/englandmap.png" width="1920"
+              height="1080" loading="lazy" alt="A slid from a presentation about London's public transport" />
             <figcaption class="mt-3 text-sm opacity-80"><strong>England</strong> Presented by the vice president, who
               went to London.
             </figcaption>
@@ -362,71 +361,54 @@
 
       </div>
     </section>
+    <section class="relative overflow-hidden my-12" aria-labelledby="cta-title">
+      <img class="absolute inset-0 size-full object-cover" src="img/worldflags.jpg" width="1600" height="900"
+        loading="lazy" alt="" />
+      <div class="slide-scrim"></div>
+      <div class="relative max-w-3xl mx-auto px-6 py-24 md:py-32 text-center text-white">
+        <h2 id="cta-title" class="tracking-tight text-4xl md:text-6xl font-bold mb-6">Talk to us</h2>
+        <p class="text-xl mb-10">Want to join?</p>
+        <a class="btn btn-primary btn-lg" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Send an email</a>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-base-200 text-base-content border-t border-base-content/10">
     <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
         <a class="flex items-center gap-2 text-xl font-extrabold tracking-tight" href="index.html">
-          <svg class="size-8 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2" />
-            <path d="M8 16V9l4 4 4-4v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          Atrium
+          <img src="img/ga-international-club-logo.png" class="nav-bar-logo" />
+          GA International Club
         </a>
-        <p class="mt-4 opacity-80 max-w-xs">What you do and who for, in one line.</p>
+        <p class="mt-4 opacity-80 max-w-xs">We create cultural awareness at Gilmour Academy.</p>
         <div class="flex gap-2 mt-5">
           <!-- A social link needs a name a screen reader can say. The icon is not
                  one. -->
-          <a class="btn btn-ghost btn-square btn-sm" href="https://www.linkedin.com/" aria-label="LinkedIn"><svg
-              class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect width="4" height="12" x="2" y="9" />
-              <circle cx="4" cy="4" r="2" />
-            </svg></a>
-          <a class="btn btn-ghost btn-square btn-sm" href="https://www.instagram.com/" aria-label="Instagram"><svg
-              class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-            </svg></a>
+
         </div>
       </div>
       <nav aria-label="Footer">
         <h2 class="footer-title">Pages</h2>
         <ul class="space-y-2">
-          <li><a class="link link-hover" href="index.html">Home</a></li>
-          <li><a class="link link-hover" href="services.html">Services</a></li>
-          <li><a class="link link-hover" href="work.html">Work</a></li>
-          <li><a class="link link-hover" href="services.html#pricing">Pricing</a></li>
-          <li><a class="link link-hover" href="contact.html">Contact</a></li>
+          <li><a class="link link-hover" href="#main">Home</a></li>
+          <li><a class="link link-hover" href="#example-work">Work</a></li>
+          <li><a class="link link-hover" href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div>
         <h2 class="footer-title">Contact</h2>
         <address class="not-italic space-y-2">
-          <p><a class="link link-hover" href="mailto:hello@example.com">hello@example.com</a></p>
-          <p><a class="link link-hover" href="tel:+12165550100">(216) 555-0100</a></p>
-          <p>123 Your Street, Your City</p>
+          <p><a class="link link-hover" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">*Not putting real email on
+              practice
+              site*</a>
+          </p>
+          <p><a class="link link-hover">*Not putting my number on practice site*</a></p>
+          <p>34001 Cedar Rd, Gates Mills, OH 44040</p>
         </address>
       </div>
       <!-- THE SIGNUP says thank you without sending (data-demo). Point action at
              a real service and delete data-demo, or delete this block. -->
-      <form data-demo>
-        <h2 class="footer-title">One useful email a month</h2>
-        <label class="sr-only" for="news-email">Email address</label>
-        <div class="join w-full">
-          <input class="input join-item w-full" type="email" id="news-email" name="email" required autocomplete="email"
-            placeholder="you@example.com" />
-          <button class="btn btn-primary join-item" type="submit">Subscribe</button>
-        </div>
-        <p class="text-sm opacity-80 mt-2">Say what is in it. Unsubscribe any time.</p>
-        <p data-sent hidden role="status" tabindex="-1" class="text-sm mt-2 font-semibold">Thanks — the next one is
-          yours.</p>
-      </form>
+
     </div>
 
     <!-- CREDITS: creator, source, license and changes for every borrowed thing.
@@ -434,38 +416,24 @@
     <div class="border-t border-base-content/10">
       <div
         class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4 text-sm">
-        <p class="opacity-80">© <span data-year>20XX</span> Your business. Built with daisyUI and Tailwind CSS; icons by
+        <p class="opacity-80">© 2026 GA International Club. Built with daisyUI and Tailwind CSS; icons by
           Lucide.</p>
-        <details class="md:max-w-xl">
+        <details class="md:max-w-xl" id="photo-credits">
           <summary class="cursor-pointer link link-hover opacity-80">Photo credits</summary>
           <ul class="mt-3 space-y-1 opacity-80">
-            <li>Office: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Working_in_open_office_space_(Unsplash).jpg">Crew</a>,
-              Wikimedia Commons, <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
-              Cropped.</li>
-            <li>Laptop: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Man_at_a_laptop_in_an_office_(Unsplash).jpg">Bench
-                Accounting</a>, Wikimedia Commons, <a class="link"
-                href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Cropped.</li>
-            <li>Atrium: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52900630177.jpg">w_lemay</a>,
-              Wikimedia Commons, <a class="link" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA
-                2.0</a>. Cropped.</li>
-            <li>Workshop: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:TechnicalWishlist_Workshop_Search_16-18_Munich_StickyNotesWall1.jpg">Jan
-                Dittrich (WMDE)</a>, Wikimedia Commons, <a class="link"
-                href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Cropped.</li>
-            <li>Typing: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Typing_on_a_mac_(Unsplash).jpg">Thomas Lefebvre</a>,
-              Wikimedia Commons, <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
-              Cropped.</li>
-            <li>Tape deck, before and after: <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Akai_GX-635D_tape_recorder_(16679601897).jpg">Sameer
-                Verma</a>, retouched by <a class="link"
-                href="https://commons.wikimedia.org/wiki/File:Akai_GX_635D_-_edit.jpg">Pittigrilli</a>, Wikimedia
-              Commons, <a class="link" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Cropped,
-              and the original lined up with the retouch.</li>
-            <li>Map: © <a class="link" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+            <li>Gilmour Academy Tudor House: <a class="link" href="https://www.gilmour.org/">gilmour.org</a>
+            <li>Earth: <a class="link"
+                href="https://www.naturalnews.com/2017-08-27-new-science-confirms-earth-was-warmer-during-medieval-period.html">naturalnews</a>
+            <li>Slovenia map: <a class="link" href="https://east-usa.com/world/slovenia-map.html">east-usa</a>
+            <li>Map of England: <a class="link"
+                href="https://map.jace.org.uk/printable-detailed-map-of-england">map.jace</a>
+            <li>Malta Map: <a class="link"
+                href="https://www.kids-world-travel-guide.com/malta-for-kids.html">kids-world-travel-guide</a>
+            <li>Map of China: <a class="link"
+                href="https://www.nationsonline.org/oneworld/china_administrative_map2.htm">nationsonline</a>
+            <li>The Baltics map: <a class="link"
+                href="https://www.kids-world-travel-guide.com/baltic-states.html">kids-world-travel-guide</a>
+            <li>World flags: <a class="link" href="https://wallpapercave.com/world-flags-wallpapers">wallpapercave</a>
             </li>
           </ul>
         </details>
